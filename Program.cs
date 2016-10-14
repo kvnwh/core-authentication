@@ -20,6 +20,7 @@ namespace DotnetCoreAuthentication
             var host = new WebHostBuilder()
                 .UseConfiguration(config)
                 .UseKestrel()
+                .UseUrls("http://localhost:8080") // TODO: update url
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
